@@ -41,48 +41,51 @@
 <a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h1>
 
 
-        <ul class="share-links">
-          <li data-service="facebook">
-            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php">Facebook</a>
+        <ul>
+          <li>
+            <a class="share-link" href="https://www.facebook.com/sharer/sharer.php">Facebook</a>
           </li>
-          <li data-service="twitter">
-            <a target="_blank" href="https://twitter.com/share">Twitter</a>
+          <li>
+            <a class="share-link" href="https://twitter.com/share">Twitter</a>
           </li>
-          <li data-service="pinterest">
-            <a target="_blank" href="//pinterest.com/pin/create/button">Pinterest</a>
+          <li>
+            <a class="share-link" href="//pinterest.com/pin/create/button">Pinterest</a>
           </li>
-          <li data-service="tumblrPhoto">
-            <a target="_blank" href="http://www.tumblr.com/share/link">Tumblr</a>
+          <li>
+            <a class="share-link" href="http://www.tumblr.com/share/link">Tumblr link</a>
           </li>
-          <li data-service="fancy">
-            <a target="_blank" href="http://fancy.com/fancyit">Fancy</a>
+          <li>
+            <a class="share-link" href="http://www.tumblr.com/share/photo">Tumblr photo</a>
           </li>
-          <li data-service="googlePlus">
-            <a target="_blank" href="https://plus.google.com/share">Google Plus</a>
+          <li>
+            <a class="share-link" href="http://fancy.com/fancyit">Fancy</a>
+          </li>
+          <li>
+            <a class="share-link" href="https://plus.google.com/share">Google Plus</a>
           </li>
         </ul>
 
         <h2>Instructions</h2>
 
         <ol>
-          <li>Create some bog-standard hyperlinks</li>
-          <li>Add a class name to their containing element</li>
-          <li>Add the <code>service</code> data attribute to the element you wish to trigger the sharing. <em>(e.g. facebook)</em></li>
-          <li>Add the open graph meta tags</li>
-          <li>Initialise the sharer <code>new Sharer(".share-links");</code></li>
+          <li>Create some hyperlink</li>
+          <li>Add the href attribute for the sharing service you want</li>
+          <li>Add a class name to them</li>
+          <li>Initialise a Sharer</li>
         </ol>
 
-<pre><code>&lt;div class="share-links"&gt;
-    &lt;a href="https://twitter.com/share" data-service="facebook">
-      Share on Twitter
-    &lt;/a&gt;
-    ...etc...
-&lt;/div&gt;</code></pre>
+<pre><code>&lt;a class="share-link" href="https://twitter.com/share"&gt;
+  Share on Twitter
+&lt;/a&gt;
+...etc...</code></pre>
 
-<pre><code>&lt;meta property="og:url" content="http://google.co.uk/"&gt;
-&lt;meta property="og:title" content="Google"&gt;
-&lt;meta property="og:image" content=""&gt;
-&lt;meta property="og:description" content="A search engine, check it out!"&gt;</code></pre>
+<pre><code>new Sharer({
+  className: 'share-link',
+  title: 'My amazing page',
+  description: 'Checkout this really cool thing',
+  url: 'http://example.com',
+  image: 'http://lorempixel.com/640/480/abstract'
+});</code></pre>
 
       </section>
       <footer>
@@ -90,7 +93,19 @@
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
+
     <script src="javascripts/scale.fix.js"></script>
+
+    <script src="https://raw.github.com/amk221/Custom-Social-Share-Buttons/master/sharer.js"></script>
+    <script>
+    new Sharer({
+      className: 'share-link',
+      title: 'Custom Social Share Buttons',
+      description: 'A JavaScript layer that allows you to easily add share links for popular social sites without having to load their associated JavaScript library',
+      url: 'https://github.com/amk221/Custom-Social-Share-Buttons',
+      image: 'http://lorempixel.com/640/480/abstract'
+    });
+    </script>
     
   </body>
 </html>
