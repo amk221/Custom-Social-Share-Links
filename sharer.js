@@ -1,6 +1,4 @@
 var Sharer = function(options) {
-  var links = document.getElementsByClassName(options.className);
-
   var services = [{
     name: 'facebook',
     url: 'https://www.facebook.com/sharer/sharer.php',
@@ -15,7 +13,7 @@ var Sharer = function(options) {
     },
     options: {
       width: 626,
-      height: 436
+      height: 314
     }
   }, {
     name: 'twitter',
@@ -110,14 +108,22 @@ var Sharer = function(options) {
     }
   };
 
+  var popup = function popup(url, name, options) {
+    options.left = (screen.width  / 2) - (options.width  / 2);
+    options.top  = (screen.height / 2) - (options.height / 2);
+    options      = serialize(',', options);
+    window.open(url, name, options);
+  };
+
   var share = function(e) {
     e.preventDefault();
     var service = getService(this.getAttribute('href'));
     var url     = service.url + '?' + serialize('&', service.params);
     var name    = service.name + 'Dialog';
-    var options = serialize(',', service.options);
-    window.open(url, name, options);
+    popup(url, name, service.options);
   };
+
+  var links = document.getElementsByClassName(options.className);
 
   for (var i = 0, l = links.length; i < l; i++) {
     links.item(i).addEventListener('click', share, false);
