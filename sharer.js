@@ -84,6 +84,39 @@ var Sharer = function(options) {
       width: 600,
       height: 600
     }
+  }, {
+    name: 'reddit',
+    url: 'http://reddit.com/submit',
+    params: {
+      url: options.url
+    },
+    options: {
+      width: 670,
+      height: 480
+    }
+  }, {
+    name: 'stumbleUpon',
+    url: 'http://stumbleupon.com/submit',
+    params: {
+      url: options.url
+    },
+    options: {
+      width: 810,
+      height: 560
+    }
+  }, {
+    name: 'linkedIn',
+    url: 'https://www.linkedin.com/shareArticle',
+    params: {
+      url: options.url,
+      summary: options.description,
+      title: options.title,
+      mini: true
+    },
+    options: {
+      width: 600,
+      height: 520
+    }
   }];
 
   var serialize = function(separator, obj, prefix) {
