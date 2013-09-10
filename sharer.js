@@ -81,8 +81,8 @@ var Sharer = function(options) {
       url: options.url
     },
     options: {
-      width: 600,
-      height: 600
+      width: 495,
+      height: 460
     }
   }, {
     name: 'reddit',
