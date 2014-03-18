@@ -1,7 +1,7 @@
 var Sharer = function(options) {
   var services = [{
     name: 'facebook',
-    url: 'https://www.facebook.com/sharer/sharer.php',
+    url: '//www.facebook.com/sharer/sharer.php',
     params: {
       s: 100,
       p: {
@@ -17,7 +17,7 @@ var Sharer = function(options) {
     }
   }, {
     name: 'twitter',
-    url: 'https://twitter.com/share',
+    url: '//twitter.com/share',
     params: {
       url: options.url,
       text: options.description
@@ -40,7 +40,7 @@ var Sharer = function(options) {
     }
   }, {
     name: 'tumblrLink',
-    url: 'http://www.tumblr.com/share/link',
+    url: '//www.tumblr.com/share/link',
     params: {
       url: options.url,
       name: options.title,
@@ -52,7 +52,7 @@ var Sharer = function(options) {
     }
   }, {
     name: 'tumblrPhoto',
-    url: 'http://www.tumblr.com/share/photo',
+    url: '//www.tumblr.com/share/photo',
     params: {
       source: options.image,
       caption: options.description,
@@ -64,7 +64,7 @@ var Sharer = function(options) {
     }
   }, {
     name: 'fancy',
-    url: 'http://fancy.com/fancyit',
+    url: '//fancy.com/fancyit',
     params: {
       Title: options.title,
       ItemURL: options.url,
@@ -76,7 +76,7 @@ var Sharer = function(options) {
     }
   }, {
     name: 'googlePlus',
-    url: 'https://plus.google.com/share',
+    url: '//plus.google.com/share',
     params: {
       url: options.url
     },
@@ -86,7 +86,7 @@ var Sharer = function(options) {
     }
   }, {
     name: 'reddit',
-    url: 'http://reddit.com/submit',
+    url: '//reddit.com/submit',
     params: {
       url: options.url
     },
@@ -96,7 +96,7 @@ var Sharer = function(options) {
     }
   }, {
     name: 'stumbleUpon',
-    url: 'http://stumbleupon.com/submit',
+    url: '//stumbleupon.com/submit',
     params: {
       url: options.url
     },
@@ -106,7 +106,7 @@ var Sharer = function(options) {
     }
   }, {
     name: 'linkedIn',
-    url: 'https://www.linkedin.com/shareArticle',
+    url: '//www.linkedin.com/shareArticle',
     params: {
       url: options.url,
       summary: options.description,
